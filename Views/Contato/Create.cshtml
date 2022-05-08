@@ -1,0 +1,88 @@
+﻿@model TBContatos.Models.Contato
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Contato</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="formacao" class="control-label"></label>
+                <input asp-for="formacao" class="form-control" />
+                <span asp-validation-for="formacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="telefone" class="control-label"></label>
+                <input asp-for="telefone" class="form-control" />
+                <span asp-validation-for="telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="datacontato" class="control-label"></label>
+                <input asp-for="datacontato" class="form-control" />
+                <span asp-validation-for="datacontato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="melhorhorario" class="control-label"></label>
+                <input asp-for="melhorhorario" class="form-control" />
+                <span asp-validation-for="melhorhorario" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="primeirocontato" /> @Html.DisplayNameFor(model => model.primeirocontato)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="numerocontatos" class="control-label"></label>
+                <input asp-for="numerocontatos" class="form-control" />
+                <span asp-validation-for="numerocontatos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataprimeirocontato" class="control-label"></label>
+                <input asp-for="dataprimeirocontato" class="form-control" />
+                <span asp-validation-for="dataprimeirocontato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataultimocontato" class="control-label"></label>
+                <input asp-for="dataultimocontato" class="form-control" />
+                <span asp-validation-for="dataultimocontato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataproximocontato" class="control-label"></label>
+                <input asp-for="dataproximocontato" class="form-control" />
+                <span asp-validation-for="dataproximocontato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="obs" class="control-label"></label>
+                <input asp-for="obs" class="form-control" />
+                <span asp-validation-for="obs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
